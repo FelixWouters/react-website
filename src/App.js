@@ -7,6 +7,7 @@ import Services from './components/pages/Services';
 import Products from './components/pages/Products';
 import SignUp from './components/pages/SignUp';
 import Footer from './components/Footer';
+import Maarkedal from './components/pages/Maarkedal' ;
 
 function App() {
   return (
@@ -14,10 +15,11 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path='/' exact component={Home} />
+          <Route path='/home' exact component={Home} />
           <Route path='/services' component={Services} />
           <Route path='/products' component={Products} />
           <Route path='/sign-up' component={SignUp} />
+          <Route path='/portfolio/Maarkedal' component={Maarkedal} />
         </Switch>
         <Footer />
       </Router>
