@@ -41,7 +41,6 @@ h1 {
     box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
     -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
     filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
-    border-radius: 10px;
     overflow: hidden;
     text-decoration: none;
   }
@@ -53,10 +52,6 @@ h1 {
     overflow: hidden;
   }
   
-  .fade-img {
-    animation-name: fade-img;
-    animation-duration: 2s;
-  }
   
   .portfolio__item__pic-wrap::after {
     content: attr(data-category);
@@ -85,11 +80,7 @@ h1 {
     object-fit: cover;
     transition: all 0.2s linear;
   }
-  
-  .portfolio__item__img:hover {
-    transform: scale(1.1);
-  }
-  
+
   .portfolio__item__info {
     padding: 10px 10px 10px;
     text-align: center;
