@@ -32,16 +32,29 @@ export default App;
 
 /* 
 
-selectie paginas: keuze tussen
+welke pagina's?
+- home
+- projecten
+- over ons
+- contact
+
+
+
+selectie projecten: keuze tussen
+
+nieuwbouw/residentieel
 - klassiek
 - modern
-- industrieel
 - renovatie
-- commercieel
+
+industrieel
+commercieel
+interieur
 
 voorbeelden: 
 caanarchitecten
 https://www.starchitecten.be
+govaert & vanhoutte
 
 slideshow op projectpagina
 
