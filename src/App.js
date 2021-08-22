@@ -28,3 +28,21 @@ function App() {
 }
 
 export default App;
+
+
+/* 
+
+selectie paginas: keuze tussen
+- klassiek
+- modern
+- industrieel
+- renovatie
+- commercieel
+
+voorbeelden: 
+caanarchitecten
+https://www.starchitecten.be
+
+slideshow op projectpagina
+
+*/
