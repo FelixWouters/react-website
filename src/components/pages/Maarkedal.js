@@ -13,21 +13,21 @@ function Maarkedal() {
     <>
       <Portfolio />
       <Carousel>
-        <Carousel.Item>
+        <Carousel.Item interval={500}>
           <img
             className="d-block w-100"
             src={maarkedal}
             alt="First slide"
           />
         </Carousel.Item>
-        <Carousel.Item>
+        <Carousel.Item interval={500}>
           <img
             className="d-block w-100"
             src={maarkedal2}
             alt="Second slide"
           />
         </Carousel.Item>
-        <Carousel.Item>
+        <Carousel.Item interval={500}>
           <img
             className="d-block w-100"
             src={maarkedal3}
