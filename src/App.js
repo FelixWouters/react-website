@@ -1,13 +1,11 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
-import Home from './components/pages/Home';
+import Home from './pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Services from './components/pages/Services';
-import Products from './components/pages/Products';
-import SignUp from './components/pages/SignUp';
 import Footer from './components/Footer';
-import Maarkedal from './components/pages/Maarkedal' ;
+import Maarkedal from './pages/Projecten' ;
+import Projecten from './pages/Projecten';
 
 function App() {
   return (
@@ -16,10 +14,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path='/home' exact component={Home} />
-          <Route path='/services' component={Services} />
-          <Route path='/products' component={Products} />
-          <Route path='/sign-up' component={SignUp} />
-          <Route path='/portfolio/Maarkedal' component={Maarkedal} />
+          <Route path='/projecten' component={Projecten} />
         </Switch>
         <Footer />
       </Router>
