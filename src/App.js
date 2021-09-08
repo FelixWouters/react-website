@@ -1,11 +1,11 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import './App.css';
+import './index.css';
 import Home from './pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Footer from './components/Footer';
-import Maarkedal from './pages/Projecten' ;
 import Projecten from './pages/Projecten';
+import ProjectDetails from './pages/ProjectDetails';
+import HeroSection from './components/HeroSection';
 
 function App() {
   return (
@@ -15,9 +15,10 @@ function App() {
         <Switch>
           <Route path='/home' exact component={Home} />
           <Route path='/projecten' component={Projecten} />
+          <Route path='/project/:id' component={ProjectDetails}/>
         </Switch>
-        <Footer />
       </Router>
+
     </>
   );
 }
