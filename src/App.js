@@ -1,25 +1,49 @@
 import React from 'react';
-import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+
+
+// page & layout imports
+import SiteHeader from './components/Navbar';
 import './index.css';
 import Home from './pages/Home';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Projecten from './pages/Projecten';
-import ProjectDetails from './pages/ProjectDetails';
+import Details from './pages/ProjectDetails';
 import HeroSection from './components/HeroSection';
+
+//apollo client
+
+const client = new ApolloClient({
+  uri: 'http://localhost:1337/graphql',
+  cache: new InMemoryCache()
+
+})
+
+
+
 
 function App() {
   return (
-    <>
       <Router>
-        <Navbar />
-        <Switch>
-          <Route path='/home' exact component={Home} />
-          <Route path='/projecten' component={Projecten} />
-          <Route path='/project/:id' component={ProjectDetails}/>
-        </Switch>
+        <ApolloProvider client={client}>
+          <div className="App">
+            <SiteHeader/>
+            <Switch>
+              <Route exact path='/home'>
+                <Redirect to='/'/>
+                <Home/>  
+              </Route>
+              <Route path='/projecten'>
+                <Projecten/>
+              </Route>
+              <Route path='/project/:id'>
+                <Details/>
+              </Route>
+            </Switch>
+          </div>
+        </ApolloProvider>
       </Router>
 
-    </>
   );
 }
 
