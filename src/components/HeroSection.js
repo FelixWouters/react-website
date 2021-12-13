@@ -9,7 +9,6 @@ function HeroSection() {
             <video src={video} autoPlay loop muted />
             <div className="hero-btns">
                 <Button className="btns" buttonStyle="btn--outline" buttonSize="btn--large">PROJECTEN <i class="fas fa-arrow-right"></i></Button>
-
             </div>
         </div>
     )

@@ -5,11 +5,10 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 // page & layout imports
 import SiteHeader from './components/Navbar';
-import './index.css';
 import Home from './pages/Home';
 import Projecten from './pages/Projecten';
 import Details from './pages/ProjectDetails';
-import HeroSection from './components/HeroSection';
+import About from './pages/About';
 
 //apollo client
 
@@ -30,7 +29,7 @@ function App() {
             <SiteHeader/>
             <Switch>
               <Route exact path='/home'>
-                <Redirect to='/'/>
+                <Redirect to='/home'/>
                 <Home/>  
               </Route>
               <Route path='/projecten'>
@@ -38,6 +37,9 @@ function App() {
               </Route>
               <Route path='/project/:id'>
                 <Details/>
+              </Route>
+              <Route path='/about'>
+                <About/>
               </Route>
             </Switch>
           </div>

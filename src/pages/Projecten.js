@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { useQuery, gql } from '@apollo/client';
+import ProjectItem from '../components/ProjectItem';
+
 
 const PROJECTEN = gql`
 query getProjects {
@@ -25,31 +27,25 @@ export default function Projecten() {
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error :(</p>
 
-  console.log(data)
+  console.log(error)
 
 
   return (
 
     <div className="container">
+      <div className="row text-center">
+        <div className="col mt-3">
+          <h1>Realisaties</h1>
+        </div>
+      </div>
+      
       <div className="row">
       {data.projects.map(project => (
-        <div key={project.id} className="col-6 pt-3">
-          <div className="image-block">
-          <img className="card-img" src={ApiUrl + project.media[0].url} alt={data.titel} />
-          <h1>{project.titel}</h1>
-          <figcaption>
-            <p className="pt-2">{project.beschrijving.substring(0,50)}...</p>
-            <Link to={`/project/${project.id}`}><span><p>Ontdek meer</p></span></Link>
-          </figcaption>
-        </div>
-        </div>
-      
-
+        <ProjectItem id={project.id} path={ApiUrl + project.media[0].url} titel={project.titel} beschrijving={project.beschrijving}/>
       ))}
-    </div>
+      </div>
     </div>
     
-
   )}
   
 
