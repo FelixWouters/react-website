@@ -26,8 +26,8 @@ export default function ProjectDetails() {
             <SRLWrapper>
             <div className="row mt-2">
                 {data.media.map(img => (
-                    <div className="lightbox col-lg-4 col-md-6 col-sm-12 mt-2 px-1">
-                        <img className="lightbox__img" src={ApiUrl + img.url}/>
+                    <div key={img.id} className="lightbox col-lg-4 col-md-6 col-sm-12 mt-2 px-1">
+                        <img className="lightbox__img" src={ApiUrl + img.url} alt={img.caption}/>
                     </div>
                 ))}
             </div>

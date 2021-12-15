@@ -7,6 +7,7 @@ import ProjectItem from '../components/ProjectItem';
 const PROJECTEN = gql`
 query getProjects {
   projects {
+    thumbnail{url},
     media{
       url
     },
@@ -22,11 +23,13 @@ const ApiUrl = 'http://localhost:1337'; // or deployed URL if working in a produ
 
 
 export default function Projecten() {
+
   const { loading, error, data } = useQuery(PROJECTEN)
 
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error :(</p>
 
+  console.log(data)
   console.log(error)
 
 
@@ -41,7 +44,7 @@ export default function Projecten() {
       
       <div className="row">
       {data.projects.map(project => (
-        <ProjectItem id={project.id} path={ApiUrl + project.media[0].url} titel={project.titel} beschrijving={project.beschrijving}/>
+        <ProjectItem id={project.id} path={ApiUrl + project.thumbnail.url} titel={project.titel} beschrijving={project.beschrijving}/>
       ))}
       </div>
     </div>

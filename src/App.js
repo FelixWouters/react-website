@@ -8,7 +8,8 @@ import SiteHeader from './components/Navbar';
 import Home from './pages/Home';
 import Projecten from './pages/Projecten';
 import Details from './pages/ProjectDetails';
-import About from './pages/About';
+import Contact from './pages/Contact';
+import Footer from './components/Footer';
 
 //apollo client
 
@@ -28,8 +29,8 @@ function App() {
           <div className="App">
             <SiteHeader/>
             <Switch>
-              <Route exact path='/home'>
-                <Redirect to='/home'/>
+              <Route exact path='/'>
+                <Redirect to='/'/>
                 <Home/>  
               </Route>
               <Route path='/projecten'>
@@ -38,12 +39,14 @@ function App() {
               <Route path='/project/:id'>
                 <Details/>
               </Route>
-              <Route path='/about'>
-                <About/>
+              <Route path='/contact'>
+                <Contact/>
               </Route>
             </Switch>
+            <Footer />
           </div>
         </ApolloProvider>
+        
       </Router>
 
   );
