@@ -1,14 +1,16 @@
 import React from 'react';
-import { Button } from './Button';
 import './HeroSection.css';
-import video from '../assets/videos/video-1.mp4'
 
 function HeroSection() {
     return (
-        <div className="hero-container">
-            <video src={video} autoPlay loop muted />
-            <div className="hero-btns">
-                <Button className="btns" buttonStyle="btn--outline" buttonSize="btn--large">PROJECTEN <i class="fas fa-arrow-right"></i></Button>
+        <div className="jumbotron">
+            <div className="container">
+                <h1 className="display-4 my-auto">Hello, world!</h1>
+                <p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+                <p>It uses utility classNamees for typography and spacing to space content out within the larger container.</p>
+                <p className="lead">
+                    <a className="btn btn-primary btn-lg" href="/projecten" role="button">Projecten</a>
+                </p>
             </div>
         </div>
     )

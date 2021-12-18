@@ -25,7 +25,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className='navbar'>
+      <nav className='navbar sticky-top'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
             Paul Kindt

@@ -10,6 +10,7 @@ import Projecten from './pages/Projecten';
 import Details from './pages/ProjectDetails';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
+import './app.scss';
 
 //apollo client
 

@@ -11,7 +11,7 @@ function Footer() {
                             <div className="col-sm-6 col-md-3 item">
                                 <h3>Pagina's</h3>
                                 <ul>
-                                    <li><Link to='/home' >Home</Link></li>
+                                    <li><Link to='/' >Home</Link></li>
                                     <li><Link to='/projecten' >Projecten</Link></li>
                                     <li><Link to='/contact' >Contact</Link></li>
                                 </ul>

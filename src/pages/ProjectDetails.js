@@ -1,8 +1,8 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import useFetch from '../hooks/useFetch'
-
 import { SRLWrapper } from "simple-react-lightbox";
+
 
 
 const ApiUrl = 'http://localhost:1337'; // or deployed URL if working in a production enviroment
