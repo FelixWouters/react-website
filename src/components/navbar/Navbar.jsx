@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
+import { Link, NavLink } from 'react-router-dom';
+import './Navbar.scss';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -42,6 +42,8 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link to='/contact' className='nav-links' onClick={closeMobileMenu}>Contact</Link>
+            </li>
+            <li>
             </li>
           </ul>
         </div>

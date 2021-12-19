@@ -18,7 +18,6 @@
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    background-color: white;
     overflow: hidden;
     border-radius: 20px;
   }
@@ -41,14 +40,13 @@
     -webkit-transition: 0.5s linear;
     -o-transition: 0.5s linear;
     transition: 0.5s linear;
-    color: black;
   }
   .formWord {
     width: 40%;
     padding: 4%;
   }
   .formWord h2 {
-    color:black;
+    color:white;
     font-size: 35px;
     font-weight: bold;
     font-family: "Josefin Sans", sans-serif;
@@ -62,8 +60,7 @@
     margin-top: 2%;
     padding-left: 3%;
     background: #ffffff;
-    -webkit-box-shadow: 0px 0px 48px 0px rgb(218, 218, 218);
-    box-shadow: 0px 0px 48px 0px rgb(218, 218, 218);
+
   }
   .formWord textarea {
     width: 100%;
@@ -71,13 +68,12 @@
     border: 0;
     margin-top: 2%;
     min-height: 80px;
-    color: black;
-    -webkit-box-shadow: 0px 0px 48px 0px rgb(218, 218, 218);
-    box-shadow: 0px 0px 48px 0px rgb(218, 218, 218);
+    color: white;
     padding-left: 3%;
+    border: 2px white;
   }
 
 .succesful {
-    color:black;
+    color:white;
     padding-top: 10px;
 }

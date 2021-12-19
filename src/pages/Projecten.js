@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { useQuery, gql } from '@apollo/client';
-import ProjectItem from '../components/ProjectItem';
+import ProjectItem from '../components/projectitem/ProjectItem';
 
 
 const PROJECTEN = gql`
@@ -42,7 +42,7 @@ export default function Projecten() {
         </div>
       </div>
       
-      <div className="row">
+      <div className="realisaties row">
       {data.projects.map(project => (
         <ProjectItem id={project.id} path={ApiUrl + project.thumbnail.url} titel={project.titel} beschrijving={project.beschrijving}/>
       ))}

@@ -4,12 +4,12 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 
 // page & layout imports
-import SiteHeader from './components/Navbar';
+import SiteHeader from './components/navbar/Navbar';
 import Home from './pages/Home';
 import Projecten from './pages/Projecten';
 import Details from './pages/ProjectDetails';
 import Contact from './pages/Contact';
-import Footer from './components/Footer';
+import Footer from './components/footer/Footer';
 import './app.scss';
 
 //apollo client
