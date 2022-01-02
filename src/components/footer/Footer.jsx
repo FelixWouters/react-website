@@ -8,7 +8,7 @@ function Footer() {
                 <footer>
                     <div className="container">
                         <div className="row">
-                            <div className="col-sm-6 col-md-3 item">
+                            <div className="col-sm-6 col-md-4 item">
                                 <h3>Pagina's</h3>
                                 <ul>
                                     <li><Link to='/' >Home</Link></li>
@@ -16,15 +16,15 @@ function Footer() {
                                     <li><Link to='/contact' >Contact</Link></li>
                                 </ul>
                             </div>
-                            <div className="col-sm-6 col-md-3 item">
+                            <div className="col-sm-6 col-md-4 item">
                                 <h3>Extra</h3>
                                 <ul>
                                 <li><Link to='/media' >Media</Link></li>
                                 </ul>
                             </div>
-                            <div className="col-md-6 item text">
+                            <div className="col-md-4 item text text-right">
                                 <h3>Architectenbureau Paul Kindt</h3>
-                                <p>Paul Kindt is een Architect actief in de Vlaamse Ardennen.</p>
+                                <p><i className="fas fa-map-marker-alt"></i> Fremisstraat 1A, 9860 Maarkedal</p>
                                 <p><i className="fab fa-whatsapp"></i> 0495 20 56 77</p>
                             </div>
                             <div className="col item social"><a href="https://www.facebook.com/Architectenbureau-Paul-Kindt-295486194734546"><i className="fab fa-facebook-f"></i></a><a href="https://www.youtube.com/"><i className="fab fa-youtube"></i></a><a href="https://www.instagram.com/paulkindt/"><i className="fab fa-instagram"></i></a></div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
 import { useQuery, gql } from '@apollo/client';
 import ProjectItem from '../components/projectitem/ProjectItem';
 
@@ -26,8 +25,15 @@ export default function Projecten() {
 
   const { loading, error, data } = useQuery(PROJECTEN)
 
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error :(</p>
+  if (loading) return (
+    <div class="bouncing-loader">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  );
+
+  if (error) return <p>Database connection failed. Please contact webmaster.</p>
 
   console.log(data)
   console.log(error)
@@ -50,5 +56,3 @@ export default function Projecten() {
     </div>
     
   )}
-  
-

@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react'
+import React, {useRef, useState} from 'react';
 import './ContactForm.scss';
 import emailjs from 'emailjs-com';
 
@@ -30,33 +30,25 @@ function ContactForm(props) {
 
 
     return (
-            <form action="" ref={form} onSubmit={sendEmail}>
-              <div className="formWord">
-                <h2>Stel uw vraag hier</h2>
-                <span>Naam</span>
-                <br/>
-                <input className="input100" type="text" name="fullName" required=""/>
-                <br/>
-                <span>Telefoon</span>
-                <br/>
-                <input className="input100" type="text" name="phone" required=""/>
-                <br/>
-                <span>Email</span>
-                <br/>
-                <input className="input100" type="text" name="email" required=""/>
-                <b/>
-              </div>
-
-              <div className="formWord">
-                <span>Bericht</span>
-                <br/>
-                <textarea name="message" required=""></textarea>
-                <br/>
-                <button type="submit">VERSTUUR</button>
-
+        <>
+        <div className="form-title">Let's talk!</div>
+        <form className="row" action="" ref={form} onSubmit={sendEmail}>
+            <div className="col-md-12">
+              <input type="text" className="form-control mt-3" name="fullName" id="inputName" placeholder='Naam'/>
+              <input type="email" className="form-control mt-5" name="email" id="inputEmail" placeholder='email@gmail.com'/>
+              <input type="phone" className="form-control mt-5" name="inputPhone" placeholder='+32 495 20 56 77'/>
+            </div>
+            <div className="col-md-12">
+                <textarea className="form-control mt-5" placeholder="Laat hier uw bericht achter" name="inputMessage"></textarea>
+                <button type="submit" className="btn btn-light mt-4">Verstuur</button>
+            </div>
+            
+            <div className="formWord col-md-12 mt-5">
                 <div className="row">{result ? <Result /> : null}</div>
               </div>
-            </form>
+        </form> 
+        </>
+
 
 
     );
