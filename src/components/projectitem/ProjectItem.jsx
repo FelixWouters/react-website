@@ -6,7 +6,7 @@ import './ProjectItem.scss';
 function ProjectItem(props) {
     return (
         <>
-      <div key={props.id} className="col-lg-6 col-md-12 col-sm-12 mt-3">
+      <div key={props.id} className="col-lg-3 col-md-6 col-sm-6 mt-3">
         <div className="project">
           <figure class="hover-img">
             <Link to={`/project/${props.id}`}><img class="project__img" src={props.path} alt={props.titel}/></Link>

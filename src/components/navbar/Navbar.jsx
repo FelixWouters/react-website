@@ -1,51 +1,36 @@
-import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.scss';
+import logo from '../../assets/images/logopaul.png'
 
 function Navbar() {
-  const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
-    }
-  };
-
-  useEffect(() => {
-    showButton();
-  }, []);
-
-  window.addEventListener('resize', showButton);
 
   return (
     <>
-      <nav className='navbar sticky-top'>
-        <div className='navbar-container'>
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            Paul Kindt
+      <nav className="navbar navbar-expand-lg">
+        <div className="container">
+          <Link to='/' className='navbar-brand'>
+            <img src={logo} alt="Logo" />
           </Link>
-          <div id={button} className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ml-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link to='/' className="nav-link active" aria-current="page" href="#">Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link to='/projecten' className="nav-link">Projecten</Link>
+              </li>
+              <li className="nav-item">
+                <Link to='/over-ons' className="nav-link">Over ons</Link>
+              </li>
+              <li className="nav-item">
+                <Link to='/contact' className="nav-link">Contact</Link>
+              </li>
+            </ul>
           </div>
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>Home</Link>
-            </li>
-            <li className='nav-item'>
-              <Link to='/projecten' className='nav-links' onClick={closeMobileMenu}>Projecten</Link>
-            </li>
-            <li className='nav-item'>
-              <Link to='/contact' className='nav-links' onClick={closeMobileMenu}>Contact</Link>
-            </li>
-            <li>
-            </li>
-          </ul>
         </div>
       </nav>
     </>

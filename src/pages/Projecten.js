@@ -41,7 +41,7 @@ export default function Projecten() {
 
   return (
 
-    <div className="container">
+    <div className="container-fluid">
       <div className="row text-center">
         <div className="col mt-3">
           <h1>Realisaties</h1>
